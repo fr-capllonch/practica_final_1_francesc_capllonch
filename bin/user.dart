@@ -16,10 +16,11 @@ class User {
   }
 
 
-  User({required String id, required nomComplet, required correu, required double saldo, this.esVIP = false}){
+  User({required String id, required String nomComplet, required correu, required double saldo, this.esVIP = false}){
     _id = id;
     _nomComplet = nomComplet;
     this.correu = correu;
+    _saldo = 0.0;
   }
 
   double get getSaldo{
@@ -30,6 +31,10 @@ class User {
   String get getId{
 
     return _id;
+  }
+
+  String get getnomComplet{
+    return _nomComplet;
   }
 
   double recarregarSaldo(double quantitat){
