@@ -6,21 +6,16 @@ class Patinet extends Vehicle{
   late int velocitatMaxima;
 
   @override
-  double calcularCostReserva(int min) {
-    double cost;
-    //no es troba la funcio esVIP
-    if(User.esVIP == true){  
-      return cost = ((min * preuPerMinut)/0.9); 
-    }
-
-    /* o fer:
+  double calcularCostReserva(int min, [User? user]) {
     
-    if(User.getVIP == true){  
-      return cost = ((min * preuPerMinut)/0.9); 
-    }
+    //no es troba la funcio esVIP
+    
+      if(user?.esVIP == true){  
+        return (min * preuPerMinut)*0.9; 
+      }
 
-    */
+    
 
-    return cost = (min * PreuPerMinut);
+    return (min * preuPerMinut);
   }
 }

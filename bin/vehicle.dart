@@ -1,4 +1,5 @@
 import 'gpsLocation.dart';
+import 'user.dart';
 
 abstract class Vehicle with GPSlocation{
 
@@ -18,5 +19,5 @@ abstract class Vehicle with GPSlocation{
     return percentatge;
   }
 
-  double calcularCostReserva(int min);
+  double calcularCostReserva(int min, [User? user]);
 }

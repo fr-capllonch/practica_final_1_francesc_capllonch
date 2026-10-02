@@ -1,4 +1,6 @@
 import 'vehicle.dart';
+import 'user.dart';
+
 
 class Cotxe extends Vehicle{
 
@@ -6,9 +8,9 @@ class Cotxe extends Vehicle{
   late bool requereixLlicenia;
 
   @override
-  double calcularCostReserva(int min) {
+  double calcularCostReserva(int min, [User? user]) {
 
-    double cost = (min * preuPerMin)+2.0;
+    double cost = (min * preuPerMinut)+2.0;
 
     return cost;
 

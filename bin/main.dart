@@ -9,6 +9,8 @@ void main(){
   // no se perque no se afageix l'usuari nou
   User fran = new User.nou( id: "312a", nomComplet: "Fran", correu: "f@gmail.com");
 
-  Vehicle flota = [Vehicle.patinet(), Vehicle.patinet(),];
+  Vehicle flota = [Vehicle.patinet(), Vehicle.patinet(),Vehicle.patinet(),Vehicle.cotxe(), Vehicle.cotxe()];
+
+  
   
 }
