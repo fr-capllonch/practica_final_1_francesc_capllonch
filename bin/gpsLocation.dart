@@ -3,7 +3,7 @@ mixin GPSlocation {
   late double latitud;
   late double longitud;
 
-  actualitzarUbicacio(double lat, double lng){
+  void actualitzarUbicacio(double lat, double lng){
     latitud = lat;
     longitud = lng;
   }
