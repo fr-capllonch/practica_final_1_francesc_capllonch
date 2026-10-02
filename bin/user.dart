@@ -1,3 +1,4 @@
+import 'saldoInsuficientException.dart';
 
 class User {
   //atributs privats
@@ -33,7 +34,7 @@ class User {
 
   double recarregarSaldo(double quantitat){
     if(quantitat < 0){
-      ArgumentError("La quantitat no pot ser negativa");
+      throw SaldoInsuficientException("La quantitat no pot ser negativa");
     }
     _saldo = _saldo + quantitat;
 

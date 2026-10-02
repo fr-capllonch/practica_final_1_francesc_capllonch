@@ -1,6 +1,7 @@
 import 'user.dart';
 import 'patinet.dart';
 import 'cotxe.dart';
+import 'dart:io';
 
 void main(){
 
@@ -27,4 +28,10 @@ void main(){
 
   var (lat,  lng) = flota[3].obtenirCoordenades();
   print((lat, lng));
+
+  try{
+    fran.recarregarSaldo(-0.1);
+  }on ArgumentError catch(e){
+    stderr.writeln('Error: $e');
+  }
 }
