@@ -6,7 +6,6 @@ class User {
   late double _saldo;
   late bool esVIP;
 
-//no se si els this son realment necessaris
   User.nou( {required String id, required nomComplet, required correu}){
     _id = id;
     _nomComplet = nomComplet;

@@ -2,10 +2,10 @@ import 'user.dart';
 import 'patinet.dart';
 import 'cotxe.dart';
 import 'dart:io';
+import 'vehicle.dart';
 
 void main(){
 
-  // no se perque no se afageix l'usuari nou
   User fran = new User.nou( id: "312a", nomComplet: "Fran", correu: "f@gmail.com");
 
   var flota = [Patinet(id: "1", bateriaPercentatge: 22, enUs: true, preuPerMinut: 0.4, velMax: 25),
@@ -20,7 +20,16 @@ void main(){
   ];
 
 
+  Vehicle bateriaMax = flota.reduce((actual, seguent){
+    if(actual.bateriaPercentatge > seguent.bateriaPercentatge){
+      return actual;
+    }else{
+      return seguent;
+    }
+  });
 
+  Iterable vehiclesDisponibles = flota.where((Vehicle) => Vehicle.bateriaPercentatge > 20 && !Vehicle.enUs,
+  );
 
   double cost = flota[1].calcularCostReserva( 15, fran);
   print(cost);

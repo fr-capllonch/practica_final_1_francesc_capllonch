@@ -26,7 +26,6 @@ class Patinet extends Vehicle{
   
   double calcularCostReserva(int min, [User? user]) {
     
-    //no es troba la funcio esVIP
     
       if(user?.esVIP == true){  
         return (min * preuPerMinut)*0.9; 
