@@ -9,10 +9,11 @@ abstract class Vehicle with GPSlocation{
   late double preuPerMinut;
 
   String estatBateria(){
-    String percentatge = switch (this.bateriaPercentatge){
+    String percentatge = switch (bateriaPercentatge){
       < 20 => "Critica",
       <= 20 => "Mitjana",
       >= 80 => "Alta", 
+      > 100 => throw UnimplementedError("Bateria major de 100"),
       int() => throw UnimplementedError(),
     };
 
