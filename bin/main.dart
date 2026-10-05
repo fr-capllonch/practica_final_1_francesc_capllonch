@@ -28,8 +28,12 @@ void main(){
     }
   });
 
+  print(bateriaMax);
+
   Iterable vehiclesDisponibles = flota.where((Vehicle) => Vehicle.bateriaPercentatge > 20 && !Vehicle.enUs,
   );
+
+  print(vehiclesDisponibles.toList());
 
   double cost = flota[1].calcularCostReserva( 15, fran);
   print(cost);

@@ -21,4 +21,9 @@ abstract class Vehicle with GPSlocation{
   }
 
   double calcularCostReserva(int min, [User? user]);
+
+  @override
+String toString() {
+  return 'Vehicle(id: $id, batería: $bateriaPercentatge%, enUso: $enUs)';
+}
 }
